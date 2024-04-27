@@ -1,0 +1,11 @@
+Lunes: Realizar las Clases Trámite y Expediente. Manejo de Excepciones.
+PATO: Trámite.
+JOACO: Expediente.
+
+Martes: Servicios y Validadores. Archivos.
+
+Miércoles: Listar.
+
+Jueves: Repositorios y Consola.
+
+Viernes: Detalles, lo que quede por hacer.
