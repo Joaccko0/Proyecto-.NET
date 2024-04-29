@@ -19,8 +19,9 @@ Resolución
 Notificación
 Pase al Archivo
 */
-public class Tramite
+public class Tramite:IDisposable
 {
+    private bool disposed = false;
     private static int s_id = 0;
     //LLevo un conteo estatico en el constructor para generar ids unicos de forma ascendente
     public int id {get; private set; } 
@@ -55,12 +56,19 @@ public class Tramite
     //IMPLEMENTAR VALIDADORES TRY CATCH PATOOO, Constructor Completo.
     public Tramite (int idExpediente, string contenido, int idUsuario, EstadoTramite estadoTramite)
     {
+        try
+        {
         id  = s_id;
         s_id++;
         ExpedienteId = idExpediente;
         ActualizarContenido(contenido, idUsuario); 
         this.idUsuario = idUsuario;
         this.estadoTramite = estadoTramite;
+        }
+        catch(ContenidoException e)
+        {
+            Console.WriteLine($"{e.message}, {e.type}");
+        }
         //Desconosco si debemos llamar a un destructor si hay cagada.
     }
     //Metodo Privado Para Actualizacion UltimaModificacion
@@ -91,5 +99,16 @@ public class Tramite
     {
         this.estadoTramite = estadoTramite;
         UltimaModificacion(idUsuario);
+    }
+    ~Tramite()
+    {
+        try
+        {
+            Dispose(this);
+        }    
+        finally
+        {
+            base.Finalize();
+        }
     }
 }
