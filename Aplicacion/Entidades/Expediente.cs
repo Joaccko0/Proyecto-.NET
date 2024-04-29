@@ -7,7 +7,7 @@ public class Expediente
     private DateTime fechaCreacion;
     private DateTime fechaModificacion;
     private int idUsuarioModificacion;
-    //private estadoExpediente estado; Clase ENUM aun no definida
+    private estadoExpediente estado;
 
     public int Id
     {
@@ -30,6 +30,11 @@ public class Expediente
     public int IdUsuarioModificacion
     {
         get { return idUsuarioModificacion;}
+    }
+    public EstadoExpediente Estado
+    {
+        get{ return estado; }
+        set { estado = value; }
     }
 
     public Expediente()
