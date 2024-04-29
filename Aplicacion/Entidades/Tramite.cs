@@ -55,7 +55,6 @@ public class Tramite
     //IMPLEMENTAR VALIDADORES TRY CATCH PATOOO, Constructor Completo.
     public Tramite (int idExpediente, string contenido, int idUsuario, EstadoTramite estadoTramite)
     {
-        try{
         id  = s_id;
         s_id++;
         ExpedienteId = idExpediente;
