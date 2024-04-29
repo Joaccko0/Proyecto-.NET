@@ -94,3 +94,4 @@ public class Tramite
         UltimaModificacion(idUsuario);
     }
 }
+}
