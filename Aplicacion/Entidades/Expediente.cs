@@ -17,6 +17,7 @@ public class Expediente
     public string Caratula
     {
         get { return caratula; }
+        //Revisar Usar el manejo de excepciones visto en la clase 6 para una correcta 
         set { caratula = (value != null) && (value != "") ? value : throw new ArgumentException("La carátula no puede estar vacía."); }
     }
     public DateTime FechaCreacion

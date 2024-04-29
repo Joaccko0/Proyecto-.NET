@@ -10,3 +10,4 @@ public class ExpedienteValidador
         }
     }
 }
+//Joacooooo Pasemos las excepciones a un archivo unico, como indica el trabajo /ValidacionException.cs
