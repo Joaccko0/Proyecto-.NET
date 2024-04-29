@@ -59,19 +59,9 @@ public class Tramite
         id  = s_id;
         s_id++;
         ExpedienteId = idExpediente;
-        if(string.IsNullOrWhiteSpace(contenido))
-        {
-            throw new ContenidoException("Error : Contenido no valido", "El campo Esta Incompleto");
-        }
-        this.contenido = contenido; 
+        ActualizarContenido(contenido, idUsuario); 
         this.idUsuario = idUsuario;
         this.estadoTramite = estadoTramite;
-        fecha_hora_ultimaModificacion = DateTime.Now;
-        }
-        catch(ContenidoException e)
-        {
-            Console.WriteLine($"{e.message}, {e.type}");
-        }
         //Desconosco si debemos llamar a un destructor si hay cagada.
     }
     //Metodo Privado Para Actualizacion UltimaModificacion
