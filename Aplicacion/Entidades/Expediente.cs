@@ -8,7 +8,7 @@ public class Expediente
     private DateTime fechaCreacion;
     private DateTime fechaModificacion;
     private int idUsuarioModificacion;
-    private estadoExpediente estado;
+    private EstadoExpediente estado;
 
     public int Id
     {
@@ -23,13 +23,13 @@ public class Expediente
                 {
                     if(string.IsNullOrWhiteSpace(value))
                     {
-                        throw new ValidacionException("Error : Contenido no valido", "El campo Esta Incompleto");
+                        throw new ContenidoException("Error : Contenido no valido","El campo Esta Incompleto");
                     }
-                    this.contenido = value;
+                    this.caratula = value;
                 }
-                catch (ValidacionException e)
+                catch (ContenidoException e)
                 {
-                    Console.WriteLine($"{e.message}, {e.type}");
+                    Console.WriteLine($"{e.Message},{e.contenidoException}");
                 }
              }
     }
@@ -66,7 +66,7 @@ public class Expediente
         {
             if (string.IsNullOrWhiteSpace(Caratula))
             {
-                throw new ValidacionException("La carátula del expediente no puede estar vacía.");
+                throw new ContenidoException("Error : Contenido no valido", "La carátula del expediente no puede estar vacía.");
             }
             id = s_id;
             s_id++;
@@ -76,15 +76,15 @@ public class Expediente
             this.estado = Estado;
             idUsuarioModificacion = Usuario;
         }
-        catch(ValidacionException e)
+        catch(ContenidoException e)
         {
-            Console.WriteLine($"{e.message}, {e.type}");
+            Console.WriteLine($"{e.Message}, {e.contenidoException}");
         }
     }
 
     private void ActualizarFechaModificacion(int idUsuario)
     {
-        fechaModificacion = DateTime.now;
+        fechaModificacion = DateTime.Now;
         idUsuarioModificacion = idUsuario;
     } 
 
@@ -94,14 +94,14 @@ public class Expediente
         {
             if(string.IsNullOrWhiteSpace(contenido))
             {
-                throw new ValidacionException("Error : Contenido no valido", "El campo Esta Incompleto");
+                throw new ContenidoException("Error : Contenido no valido", "El campo Esta Incompleto");
             }
-            this.contenido = contenido;
+            this.Caratula = contenido;
             ActualizarFechaModificacion(idUsuario);
         }
-        catch (ValidacionException e)
+        catch (ContenidoException e)
         {
-            Console.WriteLine($"{e.message}, {e.type}");
+            Console.WriteLine($"{e.Message}, {e.contenidoException}");
         }
     }
 }

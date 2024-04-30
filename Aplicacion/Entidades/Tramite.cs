@@ -17,7 +17,7 @@ public class Tramite:IDisposable
             _idExpediente = (int)value;
         }
     }
-    public string contenido {get; private set; }   
+    public string? contenido {get; private set; }   
     public DateTime fecha_hora_creacion{get;} = DateTime.Now;
     //Opte por que sea una propiedad de unica lectura ya 
     //que toma la hora del momento en que se crea una instancia Tramite
@@ -30,6 +30,7 @@ public class Tramite:IDisposable
     {
         id  = s_id;
         s_id++;
+        contenido = "";
         //Constructor Vacio;
     }
     //IMPLEMENTAR VALIDADORES TRY CATCH PATOOO, Constructor Completo.
@@ -46,8 +47,10 @@ public class Tramite:IDisposable
         }
         catch(ValidacionException e)
         {
-            Console.WriteLine($"{e.message}");
+            
+            Console.WriteLine($"{e.Message}");
         }
+
         //Desconosco si debemos llamar a un destructor si hay cagada.
     }
     //Metodo Privado Para Actualizacion UltimaModificacion
@@ -70,7 +73,7 @@ public class Tramite:IDisposable
         }
         catch (ValidacionException e)
         {
-            Console.WriteLine($"{e.message}");
+            Console.WriteLine($"{e.Message}");
         }
     }
     //Metodo para Actualizacion del estado Del tramite
