@@ -1,0 +1,5 @@
+/home/joaco/Escritorio/proyecto-net/SGE/Consola/obj/Debug/net8.0/Consola.GeneratedMSBuildEditorConfig.editorconfig
+/home/joaco/Escritorio/proyecto-net/SGE/Consola/obj/Debug/net8.0/Consola.AssemblyInfoInputs.cache
+/home/joaco/Escritorio/proyecto-net/SGE/Consola/obj/Debug/net8.0/Consola.AssemblyInfo.cs
+/home/joaco/Escritorio/proyecto-net/SGE/Consola/obj/Debug/net8.0/Consola.csproj.CoreCompileInputs.cache
+/home/joaco/Escritorio/proyecto-net/SGE/Consola/obj/Debug/net8.0/Consola.sourcelink.json

@@ -1,0 +1,6 @@
+/home/joaco/Escritorio/proyecto-net/SGE/Aplicacion/obj/Debug/netstandard2.0/Aplicacion.csproj.AssemblyReference.cache
+/home/joaco/Escritorio/proyecto-net/SGE/Aplicacion/obj/Debug/netstandard2.0/Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
+/home/joaco/Escritorio/proyecto-net/SGE/Aplicacion/obj/Debug/netstandard2.0/Aplicacion.AssemblyInfoInputs.cache
+/home/joaco/Escritorio/proyecto-net/SGE/Aplicacion/obj/Debug/netstandard2.0/Aplicacion.AssemblyInfo.cs
+/home/joaco/Escritorio/proyecto-net/SGE/Aplicacion/obj/Debug/netstandard2.0/Aplicacion.csproj.CoreCompileInputs.cache
+/home/joaco/Escritorio/proyecto-net/SGE/Aplicacion/obj/Debug/netstandard2.0/Aplicacion.sourcelink.json
