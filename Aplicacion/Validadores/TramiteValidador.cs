@@ -2,7 +2,7 @@ namespace Aplicacion;
 
 public class TramiteValidador
 {
-    public void ValidarTramite(Tramite tramite)
+    public void static ValidarTramite(Tramite tramite)
     {
         if (string.IsNullOrEmpty(tramite.contenido))
         {
