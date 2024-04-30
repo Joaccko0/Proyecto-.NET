@@ -2,6 +2,7 @@ namespace Aplicacion;
 
 public class Expediente
 {
+    private static int s_id = 1;
     private int id;
     private string caratula;
     private DateTime fechaCreacion;
@@ -18,8 +19,21 @@ public class Expediente
     {
         get { return caratula; }
         //Revisar Usar el manejo de excepciones visto en la clase 6 para una correcta 
-        set { caratula = (value != null) && (value != "") ? value : throw new ArgumentException("La carátula no puede estar vacía."); }
+        set {   try
+                {
+                    if(string.IsNullOrWhiteSpace(value))
+                    {
+                        throw new ContenidoException("Error : Contenido no valido", "El campo Esta Incompleto");
+                    }
+                    this.contenido = value;
+                }
+                catch (ContenidoException e)
+                {
+                    Console.WriteLine($"{e.message}, {e.type}");
+                }
+             }
     }
+
     public DateTime FechaCreacion
     {
         get { return fechaCreacion;}
@@ -40,13 +54,54 @@ public class Expediente
 
     public Expediente()
     {
+        id = s_id;
+        s_id++;
         fechaCreacion = DateTime.Now;
         fechaModificacion = DateTime.Now;
     }
 
-    public void ActualizarFechaModificacion(int idUsuario)
+    public Expediente(string Caratula, EstadoExpediente Estado, int Usuario)
+    {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(Caratula))
+            {
+                throw new ContenidoException("La carátula del expediente no puede estar vacía.");
+            }
+            id = s_id;
+            s_id++;
+            fechaCreacion = DateTime.Now;
+            fechaModificacion = DateTime.Now;
+            this.caratula = Caratula;
+            this.estado = Estado;
+            idUsuarioModificacion = Usuario;
+        }
+        catch(ContenidoException e)
+        {
+            Console.WriteLine($"{e.message}, {e.type}");
+        }
+    }
+
+    private void ActualizarFechaModificacion(int idUsuario)
     {
         fechaModificacion = DateTime.now;
         idUsuarioModificacion = idUsuario;
     } 
+
+    public void ActualizarContenido(string contenido, int idUsuario)
+    {
+        try
+        {
+            if(string.IsNullOrWhiteSpace(contenido))
+            {
+                throw new ContenidoException("Error : Contenido no valido", "El campo Esta Incompleto");
+            }
+            this.contenido = contenido;
+            ActualizarFechaModificacion(idUsuario);
+        }
+        catch (ContenidoException e)
+        {
+            Console.WriteLine($"{e.message}, {e.type}");
+        }
+    }
 }

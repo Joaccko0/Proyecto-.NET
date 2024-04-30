@@ -11,3 +11,9 @@ public class ContenidoException : Exception {
         contenidoException = type;
     }    
 }
+
+public class ValidacionException : Exception {
+    public ValidacionException(string mensaje) : base(mensaje)
+    {
+    }
+}

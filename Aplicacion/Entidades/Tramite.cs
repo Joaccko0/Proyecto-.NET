@@ -35,7 +35,7 @@ public class Tramite:IDisposable
             return _idExpediente;
         }
         set{
-            _idExpediente = (int)value;
+            _idExpediente = (int)value; // No se si queremos tener un set para el id amigo
         }
     }
     public string contenido {get; private set; }   
@@ -58,12 +58,12 @@ public class Tramite:IDisposable
     {
         try
         {
-        id  = s_id;
-        s_id++;
-        ExpedienteId = idExpediente;
-        ActualizarContenido(contenido, idUsuario); 
-        this.idUsuario = idUsuario;
-        this.estadoTramite = estadoTramite;
+            id  = s_id;
+            s_id++;
+            ExpedienteId = idExpediente;
+            ActualizarContenido(contenido, idUsuario); 
+            this.idUsuario = idUsuario;
+            this.estadoTramite = estadoTramite;
         }
         catch(ContenidoException e)
         {
@@ -84,7 +84,7 @@ public class Tramite:IDisposable
         {
             if(string.IsNullOrWhiteSpace(contenido))
             {
-            throw new ContenidoException("Error : Contenido no valido", "El campo Esta Incompleto");
+                throw new ContenidoException("Error : Contenido no valido", "El campo Esta Incompleto");
             }
             this.contenido = contenido;
             UltimaModificacion(idUsuario);

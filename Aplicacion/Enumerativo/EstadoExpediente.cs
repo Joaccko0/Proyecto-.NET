@@ -1,6 +1,6 @@
 namespace Aplicacion;
 
-public enum estadoExpediente {
+public enum EstadoExpediente {
     RecienIniciado,
     ParaResolver,
     ConResolucion,
