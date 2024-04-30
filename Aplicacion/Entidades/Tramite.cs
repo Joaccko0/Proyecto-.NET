@@ -44,9 +44,9 @@ public class Tramite:IDisposable
         this.idUsuario = idUsuario;
         this.estadoTramite = estadoTramite;
         }
-        catch(ContenidoException e)
+        catch(ValidacionException e)
         {
-            Console.WriteLine($"{e.message}, {e.type}");
+            Console.WriteLine($"{e.message}");
         }
         //Desconosco si debemos llamar a un destructor si hay cagada.
     }
@@ -63,14 +63,14 @@ public class Tramite:IDisposable
         {
             if(string.IsNullOrWhiteSpace(contenido))
             {
-            throw new ContenidoException("Error : Contenido no valido", "El campo Esta Incompleto");
+            throw new ValidacionException("Error : Contenido El campo no puede estar vacio");
             }
             this.contenido = contenido;
             UltimaModificacion(idUsuario);
         }
-        catch (ContenidoException e)
+        catch (ValidacionException e)
         {
-            Console.WriteLine($"{e.message}, {e.type}");
+            Console.WriteLine($"{e.message}");
         }
     }
     //Metodo para Actualizacion del estado Del tramite

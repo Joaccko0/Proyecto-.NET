@@ -1,5 +1,6 @@
 namespace Aplicacion;
-
+/*
+creo que sobra
 public class ContenidoException : Exception {
     public string contenidoException{get; private set;}
     public ContenidoException(string message, string type):base(message) 
@@ -11,7 +12,7 @@ public class ContenidoException : Exception {
         contenidoException = type;
     }    
 }
-
+*/
 public class ValidacionException : Exception {
     public ValidacionException(string mensaje) : base(mensaje)
     {
