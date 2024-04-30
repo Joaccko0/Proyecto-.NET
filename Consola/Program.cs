@@ -1,4 +1,6 @@
 ﻿//PATO METETE A LA CONSOLA Y FIJATE PORQUE PORONGOL NO FUNCIONA, PROBE 124 COSAS DISTINTAS
+// Mira Tenes que poner desde consola una referencia entre la aplicacion Consola y Aplicacion
+// dotnet add Consola reference Aplicacion
 
 
 using Aplicacion;
