@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cNAJtw6+RGdltnF5oeTC/0+p3z0GYHtfppKY+DItsuUerdNRrWCai1SfoZeWtS48ZzjeFtvfqpBDX5YVmNb/yQ==",
+  "dgSpecHash": "UFG8a+skK5LEk1RMKzpMk5s1k3HTmShUD+jvWfM3qPqSOZ6CX5OXkJO1EQhui26BbapE3SLJ452YunhexxxvyA==",
   "success": true,
-  "projectFilePath": "/home/joaco/Escritorio/proyecto-net/SGE/Aplicacion/Aplicacion.csproj",
-  "expectedPackageFiles": [
-    "/home/joaco/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "/home/joaco/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "projectFilePath": "/home/pato/Escritorio/Proyecto-.NET/Aplicacion/Aplicacion.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
